@@ -2,4 +2,7 @@
 BasedOnStyle: Microsoft
 ---
 Language: Cpp
+FixNamespaceComments: False
+IndentAccessModifiers: True
+NamespaceIndentation: All
 PointerAlignment: Left
