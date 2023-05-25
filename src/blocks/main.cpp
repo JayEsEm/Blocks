@@ -1,5 +1,7 @@
 #include "blocks/main.hpp"
 
+#include "blocks/display.hpp"
+#include "blocks/game.hpp"
 #include "blocks/raylib.hpp"
 
 void blocks::main()
@@ -8,13 +10,12 @@ void blocks::main()
     {
         window.SetTargetFPS(60);
 
-        while (window.ShouldClose() == false)
+        blocks::display display(window);
         {
-            window.BeginDrawing();
+            blocks::game game(display);
             {
-                window.ClearBackground(raylib::Color::RayWhite());
+                game.run();
             }
-            window.EndDrawing();
         }
     }
 }
