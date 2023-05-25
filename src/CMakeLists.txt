@@ -1,9 +1,9 @@
 include(FetchContent)
 
 FetchContent_Declare(
-    entt
-    GIT_REPOSITORY  https://github.com/skypjack/entt.git
-    GIT_TAG         v3.11.1
+    flecs
+    GIT_REPOSITORY  https://github.com/SanderMertens/flecs.git
+    GIT_TAG         v3.2.3
 )
 
 FetchContent_Declare(
@@ -26,7 +26,7 @@ add_library(
     blocks/main.cpp
 )
 
-FetchContent_MakeAvailable(entt)
+FetchContent_MakeAvailable(flecs)
 FetchContent_MakeAvailable(raylib)
 FetchContent_MakeAvailable(raylib-cpp)
 
@@ -51,7 +51,7 @@ target_include_directories(
 target_link_libraries(
     blocks-src
     PRIVATE
-    EnTT::EnTT
+    flecs::flecs_static
 )
 
 target_link_libraries(
