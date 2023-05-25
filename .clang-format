@@ -2,6 +2,8 @@
 BasedOnStyle: Microsoft
 ---
 Language: Cpp
+AlwaysBreakTemplateDeclarations: Yes
+ColumnLimit: 80
 FixNamespaceComments: False
 IndentAccessModifiers: True
 NamespaceIndentation: All
