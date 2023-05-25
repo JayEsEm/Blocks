@@ -18,10 +18,6 @@ namespace blocks
             void tick();
 
         private:
-            void update();
-            void render();
-
-        private:
             blocks::display& display;
     };
 }

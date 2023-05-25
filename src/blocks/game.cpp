@@ -16,16 +16,6 @@ void blocks::game::run()
 
 void blocks::game::tick()
 {
-    update();
-    render();
-}
-
-void blocks::game::update()
-{
-}
-
-void blocks::game::render()
-{
     display.render_begin();
     {
     }
