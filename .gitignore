@@ -1,0 +1,9 @@
+## Clangd ##
+compile_commands.json
+.cache/
+
+## CMake ##
+.cmake/
+
+## VSCode ##
+.vscode/
