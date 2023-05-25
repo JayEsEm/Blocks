@@ -28,6 +28,18 @@ FetchContent_MakeAvailable(entt)
 FetchContent_MakeAvailable(raylib)
 FetchContent_MakeAvailable(raylib-cpp)
 
+target_compile_options(
+    blocks-src
+    PRIVATE
+    -Wall
+    -Wextra
+    -Wconversion
+    -Wsign-conversion
+    -Werror
+    -pedantic
+    -pedantic-errors
+)
+
 target_include_directories(
     blocks-src
     PUBLIC

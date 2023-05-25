@@ -1,6 +1,6 @@
 #include "blocks/main.hpp"
 
-#include <raylib-cpp.hpp>
+#include "blocks/raylib.hpp"
 
 void blocks::main()
 {
