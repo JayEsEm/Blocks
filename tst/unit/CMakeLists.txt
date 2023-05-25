@@ -7,9 +7,9 @@ FetchContent_Declare(
 )
 
 FetchContent_Declare(
-    fakeit
-    GIT_REPOSITORY  https://github.com/eranpeer/FakeIt.git
-    GIT_TAG         2.4.0
+    trompeloeil
+    GIT_REPOSITORY  https://github.com/rollbear/trompeloeil.git
+    GIT_TAG         v44
 )
 
 add_executable(
@@ -18,7 +18,7 @@ add_executable(
 )
 
 FetchContent_MakeAvailable(catch2)
-FetchContent_MakeAvailable(fakeit)
+FetchContent_MakeAvailable(trompeloeil)
 
 target_link_libraries(
     blocks-unit
@@ -35,5 +35,5 @@ target_link_libraries(
 target_link_libraries(
     blocks-unit
     PRIVATE
-    FakeIt::FakeIt-catch
+    trompeloeil
 )
