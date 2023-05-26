@@ -1,10 +1,13 @@
 #include "blocks/game.hpp"
 
 #include "blocks/display.hpp"
+#include "blocks/time.hpp"
+
 #include "blocks/scenes/null.hpp"
 
-blocks::game::game(blocks::display& display)
+blocks::game::game(blocks::display& display, blocks::time& time)
     : display(display)
+    , time(time)
     , scene(std::make_unique<blocks::scenes::null>(*this))
 {
 }
@@ -30,9 +33,11 @@ void blocks::game::init()
 
 void blocks::game::tick()
 {
+    float dt = time.get_frame_time();
+
     display.render_begin();
     {
-        scene->process(0.f);
+        scene->process(dt);
     }
     display.render_end();
 }

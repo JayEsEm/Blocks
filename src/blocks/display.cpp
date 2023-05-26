@@ -2,7 +2,8 @@
 
 #include <raylib.hpp>
 
-blocks::display::display(raylib::Window& window) : window(window)
+blocks::display::display(raylib::Window& window)
+    : window(window)
 {
 }
 

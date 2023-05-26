@@ -8,6 +8,7 @@ namespace blocks
     class display;
     class renderer;
     class scene;
+    class time;
 }
 
 namespace blocks
@@ -15,7 +16,7 @@ namespace blocks
     class game final
     {
         public:
-            game(blocks::display& display);
+            game(blocks::display& display, blocks::time& time);
             ~game();
 
             void run();
@@ -26,6 +27,8 @@ namespace blocks
 
         private:
             blocks::display& display;
+            blocks::time& time;
+
             std::unique_ptr<blocks::scene> scene;
     };
 }
