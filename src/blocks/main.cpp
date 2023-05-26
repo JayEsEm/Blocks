@@ -1,8 +1,9 @@
 #include "blocks/main.hpp"
 
+#include <raylib.hpp>
+
 #include "blocks/display.hpp"
 #include "blocks/game.hpp"
-#include "blocks/raylib.hpp"
 
 void blocks::main()
 {

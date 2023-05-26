@@ -1,6 +1,6 @@
 #include "blocks/display.hpp"
 
-#include "blocks/raylib.hpp"
+#include <raylib.hpp>
 
 blocks::display::display(raylib::Window& window) : window(window)
 {
