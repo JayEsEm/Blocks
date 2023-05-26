@@ -5,6 +5,7 @@ namespace bl::ecs
 {
     struct color
     {
+        public:
             unsigned char r;
             unsigned char g;
             unsigned char b;

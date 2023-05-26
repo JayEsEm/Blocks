@@ -5,6 +5,7 @@ namespace bl::ecs
 {
     struct position
     {
+        public:
             int x;
             int y;
     };
