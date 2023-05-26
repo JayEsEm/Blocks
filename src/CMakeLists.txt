@@ -26,6 +26,7 @@ add_library(
     blocks/main.cpp
     blocks/scene.cpp
     blocks/time.cpp
+    blocks/scenes/main.cpp
     blocks/scenes/null.cpp
 )
 

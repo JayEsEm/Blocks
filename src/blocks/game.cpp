@@ -8,7 +8,7 @@
 blocks::game::game(blocks::display& display, blocks::time& time)
     : display(display)
     , time(time)
-    , scene(std::make_unique<blocks::scenes::null>(*this))
+    , scene(std::make_unique<blocks::scenes::main>(*this))
 {
 }
 
