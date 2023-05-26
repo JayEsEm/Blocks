@@ -3,7 +3,7 @@
 #include "blocks/display.hpp"
 #include "blocks/time.hpp"
 
-#include "blocks/scenes/null.hpp"
+#include "blocks/scenes/all.hpp"
 
 blocks::game::game(blocks::display& display, blocks::time& time)
     : display(display)
