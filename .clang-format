@@ -4,6 +4,7 @@ BasedOnStyle: Microsoft
 Language: Cpp
 AlwaysBreakTemplateDeclarations: Yes
 BreakConstructorInitializers: BeforeComma
+Cpp11BracedListStyle: False
 ColumnLimit: 80
 FixNamespaceComments: False
 IndentAccessModifiers: True
