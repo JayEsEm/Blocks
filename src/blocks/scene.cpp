@@ -5,10 +5,6 @@ blocks::scene::scene(blocks::game& owner)
 {
 }
 
-void blocks::scene::init()
-{
-}
-
 void blocks::scene::process(float dt)
 {
     world.progress(dt);

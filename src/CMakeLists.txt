@@ -24,6 +24,8 @@ add_library(
     blocks/display.cpp
     blocks/game.cpp
     blocks/main.cpp
+    blocks/scene.cpp
+    blocks/scenes/null.cpp
 )
 
 FetchContent_MakeAvailable(flecs)

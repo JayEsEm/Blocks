@@ -15,7 +15,7 @@ namespace blocks
         public:
             scene(blocks::game& owner);
 
-            virtual void init();
+            virtual void init() = 0;
 
             void process(float dt);
 
