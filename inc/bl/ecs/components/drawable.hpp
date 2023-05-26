@@ -3,7 +3,7 @@
 
 namespace bl::ecs
 {
-    struct renderable
+    struct drawable
     {
     };
 }

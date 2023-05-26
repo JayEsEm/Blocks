@@ -12,13 +12,13 @@ bool bl::display::should_close() const
     return window.ShouldClose();
 }
 
-void bl::display::render_begin()
+void bl::display::begin_drawing()
 {
     window.BeginDrawing();
     window.ClearBackground(raylib::Color::RayWhite());
 }
 
-void bl::display::render_end()
+void bl::display::end_drawing()
 {
     window.EndDrawing();
 }

@@ -12,7 +12,8 @@ void bl::scns::main::init()
     {
         flecs::entity block = world.entity();
 
-        block.add<bl::ecs::renderable>();
+        block.add<bl::ecs::drawable>();
+
         block.set<bl::ecs::position>({ 0, 0 });
         block.set<bl::ecs::box>({ 64, 64 });
         block.set<bl::ecs::color>({ 0xFF, 0x00, 0x00, 0xFF });

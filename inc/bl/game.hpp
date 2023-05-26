@@ -5,8 +5,8 @@
 
 namespace bl
 {
+    class canvas;
     class display;
-    class renderer;
     class scene;
     class time;
 }

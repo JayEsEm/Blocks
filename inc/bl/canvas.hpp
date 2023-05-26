@@ -3,11 +3,11 @@
 
 namespace bl
 {
-    class renderer
+    class canvas
     {
         public:
-            virtual void render_begin() = 0;
-            virtual void render_end() = 0;
+            virtual void begin_drawing() = 0;
+            virtual void end_drawing() = 0;
     };
 }
 

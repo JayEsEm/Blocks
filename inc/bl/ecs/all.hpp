@@ -3,7 +3,7 @@
 
 #include "bl/ecs/components/box.hpp"
 #include "bl/ecs/components/color.hpp"
+#include "bl/ecs/components/drawable.hpp"
 #include "bl/ecs/components/position.hpp"
-#include "bl/ecs/components/renderable.hpp"
 
 #endif
