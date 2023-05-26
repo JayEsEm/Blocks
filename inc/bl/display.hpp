@@ -1,16 +1,16 @@
 #ifndef D2FADE0E_0E31_471B_BC6B_FE818D0FB94F
 #define D2FADE0E_0E31_471B_BC6B_FE818D0FB94F
 
-#include "blocks/renderer.hpp"
+#include "bl/renderer.hpp"
 
 namespace raylib
 {
     class Window;
 }
 
-namespace blocks
+namespace bl
 {
-    class display final : public blocks::renderer
+    class display final : public bl::renderer
     {
         public:
             display(raylib::Window& window);

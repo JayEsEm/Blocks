@@ -1,14 +1,14 @@
 #ifndef CF0C4C33_B050_4746_B503_715F7583BB81
 #define CF0C4C33_B050_4746_B503_715F7583BB81
 
-#include "blocks/scene.hpp"
+#include "bl/scene.hpp"
 
-namespace blocks::scenes
+namespace bl::scns
 {
-    class null : public blocks::scene
+    class null : public bl::scene
     {
         public:
-            null(blocks::game& game);
+            null(bl::game& game);
 
             virtual void init() override;
     };

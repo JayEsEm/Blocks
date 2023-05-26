@@ -3,7 +3,7 @@
 
 #include <memory>
 
-namespace blocks
+namespace bl
 {
     class display;
     class renderer;
@@ -11,12 +11,12 @@ namespace blocks
     class time;
 }
 
-namespace blocks
+namespace bl
 {
     class game final
     {
         public:
-            game(blocks::display& display, blocks::time& time);
+            game(bl::display& display, bl::time& time);
             ~game();
 
             void run();
@@ -26,10 +26,10 @@ namespace blocks
             void tick();
 
         private:
-            blocks::display& display;
-            blocks::time& time;
+            bl::display& display;
+            bl::time& time;
 
-            std::unique_ptr<blocks::scene> scene;
+            std::unique_ptr<bl::scene> scene;
     };
 }
 

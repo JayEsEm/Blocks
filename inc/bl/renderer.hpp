@@ -1,7 +1,7 @@
 #ifndef A2DB55D6_D87D_4DED_AEC2_9A4BC1D7EC84
 #define A2DB55D6_D87D_4DED_AEC2_9A4BC1D7EC84
 
-namespace blocks
+namespace bl
 {
     class renderer
     {

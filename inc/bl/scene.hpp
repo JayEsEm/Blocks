@@ -3,24 +3,24 @@
 
 #include <flecs.h>
 
-namespace blocks
+namespace bl
 {
     class game;
 }
 
-namespace blocks
+namespace bl
 {
     class scene
     {
         public:
-            scene(blocks::game& owner);
+            scene(bl::game& owner);
 
             virtual void init() = 0;
 
             void process(float dt);
 
         protected:
-            blocks::game& owner;
+            bl::game& owner;
             flecs::world world;
     };
 }

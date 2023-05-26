@@ -21,13 +21,13 @@ FetchContent_Declare(
 add_library(
     blocks-src
     STATIC
-    blocks/display.cpp
-    blocks/game.cpp
-    blocks/main.cpp
-    blocks/scene.cpp
-    blocks/time.cpp
-    blocks/scenes/main.cpp
-    blocks/scenes/null.cpp
+    bl/display.cpp
+    bl/game.cpp
+    bl/main.cpp
+    bl/scene.cpp
+    bl/time.cpp
+    bl/scns/main.cpp
+    bl/scns/null.cpp
 )
 
 FetchContent_MakeAvailable(flecs)

@@ -1,7 +1,7 @@
-#include "blocks/main.hpp"
+#include "bl/main.hpp"
 
 int main()
 {
-    blocks::main();
+    bl::main();
     return 0;
 }

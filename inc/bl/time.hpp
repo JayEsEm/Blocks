@@ -6,7 +6,7 @@ namespace raylib
     class Window;
 }
 
-namespace blocks
+namespace bl
 {
     class time final
     {
