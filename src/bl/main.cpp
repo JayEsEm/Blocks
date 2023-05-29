@@ -9,7 +9,7 @@
 
 void bl::main()
 {
-    raylib::Window window(800, 450, "bl!");
+    raylib::Window window(800, 450, "Blocks!");
     {
         window.SetTargetFPS(60);
 
