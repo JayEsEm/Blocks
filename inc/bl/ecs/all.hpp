@@ -6,4 +6,6 @@
 #include "bl/ecs/components/drawable.hpp"
 #include "bl/ecs/components/position.hpp"
 
+#include "bl/ecs/systems/renderer.hpp"
+
 #endif
