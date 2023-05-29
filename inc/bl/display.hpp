@@ -20,6 +20,8 @@ namespace bl
             void begin_drawing() override;
             void end_drawing() override;
 
+            void draw_rect(float x, float y, float w, float h) override;
+
         private:
             raylib::Window& window;
     };

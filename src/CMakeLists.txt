@@ -21,6 +21,7 @@ FetchContent_Declare(
 add_library(
     blocks-src
     STATIC
+    bl/canvas.cpp
     bl/display.cpp
     bl/game.cpp
     bl/main.cpp

@@ -22,3 +22,11 @@ void bl::display::end_drawing()
 {
     window.EndDrawing();
 }
+
+void bl::display::draw_rect(float x, float y, float w, float h)
+{
+    raylib::Color color = get_fill_color().to_raylib();
+    raylib::Rectangle rect(x, y, w, h);
+
+    rect.Draw(color);
+}
