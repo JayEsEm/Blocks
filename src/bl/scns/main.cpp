@@ -21,6 +21,6 @@ void bl::scns::main::init()
     }
 
     {
-        this->add_render_system<bl::ecs::renderer>(this->owner.get_canvas());
+        add_render_system<bl::ecs::renderer>(owner.get_canvas());
     }
 }

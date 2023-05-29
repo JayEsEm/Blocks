@@ -18,27 +18,27 @@ bl::game::~game()
 
 void bl::game::run()
 {
-    this->init();
+    init();
 
     while (display.should_close() == false)
     {
-        this->tick();
+        tick();
     }
 }
 
 bl::canvas& bl::game::get_canvas() const
 {
-    return this->get_display();
+    return get_display();
 }
 
 bl::display& bl::game::get_display() const
 {
-    return this->display;
+    return display;
 }
 
 bl::time& bl::game::get_time() const
 {
-    return this->time;
+    return time;
 }
 
 void bl::game::init()
