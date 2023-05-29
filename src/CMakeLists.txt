@@ -54,12 +54,6 @@ target_include_directories(
 
 target_link_libraries(
     blocks-src
-    PUBLIC
-    blocks-inc
-)
-
-target_link_libraries(
-    blocks-src
     PRIVATE
     flecs::flecs_static
 )
