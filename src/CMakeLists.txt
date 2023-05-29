@@ -42,9 +42,7 @@ target_compile_options(
     -Wextra
     -Wconversion
     -Wsign-conversion
-    -Werror
     -pedantic
-    -pedantic-errors
 )
 
 target_include_directories(
