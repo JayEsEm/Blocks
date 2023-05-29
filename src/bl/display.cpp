@@ -15,7 +15,7 @@ bool bl::display::should_close() const
 void bl::display::begin_drawing()
 {
     window.BeginDrawing();
-    window.ClearBackground(raylib::Color::RayWhite());
+    window.ClearBackground(raylib::Color::Black());
 }
 
 void bl::display::end_drawing()
