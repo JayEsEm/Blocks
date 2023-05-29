@@ -1,16 +1,11 @@
-#ifndef A28D31EE_674E_4469_8C3F_2612530A8472
-#define A28D31EE_674E_4469_8C3F_2612530A8472
+#ifndef AB6F14A7_31FF_4D8A_B117_3475EA32DC4A
+#define AB6F14A7_31FF_4D8A_B117_3475EA32DC4A
+
+#include "bl/color.hpp"
 
 namespace bl::ecs
 {
-    struct color
-    {
-        public:
-            unsigned char r;
-            unsigned char g;
-            unsigned char b;
-            unsigned char a;
-    };
+    typedef bl::color color;
 }
 
 #endif
