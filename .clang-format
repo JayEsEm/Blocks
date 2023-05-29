@@ -2,11 +2,20 @@
 BasedOnStyle: Microsoft
 ---
 Language: Cpp
+AlignAfterOpenBracket: BlockIndent
+AllowAllArgumentsOnNextLine: False
+AllowAllParametersOfDeclarationOnNextLine: False
+AllowShortLambdasOnASingleLine: None
 AlwaysBreakTemplateDeclarations: Yes
+BinPackArguments: False
+BinPackParameters: False
+BraceWrapping:
+  BeforeLambdaBody: True
 BreakConstructorInitializers: BeforeComma
 Cpp11BracedListStyle: False
 ColumnLimit: 80
 FixNamespaceComments: False
 IndentAccessModifiers: True
+LambdaBodyIndentation: Signature
 NamespaceIndentation: All
 PointerAlignment: Left
