@@ -1,16 +1,16 @@
 #include "bl/canvas.hpp"
 
 bl::canvas::canvas()
-    : fcolor({ 0x00, 0x00, 0x00, 0xFF })
+    : draw_color({ 0x00, 0x00, 0x00, 0xFF })
 {
 }
 
-bl::color bl::canvas::get_fill_color() const
+bl::color bl::canvas::get_draw_color() const
 {
-    return fcolor;
+    return draw_color;
 }
 
-void bl::canvas::set_fill_color(bl::color color)
+void bl::canvas::set_draw_color(bl::color color)
 {
-    this->fcolor = color;
+    this->draw_color = color;
 }

@@ -18,7 +18,7 @@ void bl::ecs::renderer::install_on(flecs::world& world)
         .each(
             [&](bl::ecs::position& pos, bl::ecs::box& box, bl::ecs::color& col)
             {
-                canvas.set_fill_color(col);
+                canvas.set_draw_color(col);
                 canvas.draw_rect(pos.x, pos.y, box.w, box.h);
             }
         );

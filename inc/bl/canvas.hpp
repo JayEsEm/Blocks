@@ -14,13 +14,14 @@ namespace bl
             virtual void end_drawing() = 0;
 
             virtual void draw_rect(float x, float y, float w, float h) = 0;
+            virtual void fill_rect(float x, float y, float w, float h) = 0;
 
-            bl::color get_fill_color() const;
+            bl::color get_draw_color() const;
 
-            void set_fill_color(bl::color color);
+            void set_draw_color(bl::color color);
 
-        protected:
-            bl::color fcolor;
+        private:
+            bl::color draw_color;
     };
 }
 
