@@ -26,6 +26,21 @@ void bl::game::run()
     }
 }
 
+bl::canvas& bl::game::get_canvas() const
+{
+    return this->get_display();
+}
+
+bl::display& bl::game::get_display() const
+{
+    return this->display;
+}
+
+bl::time& bl::game::get_time() const
+{
+    return this->time;
+}
+
 void bl::game::init()
 {
     scene->init();

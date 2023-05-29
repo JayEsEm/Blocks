@@ -21,6 +21,10 @@ namespace bl
 
             void run();
 
+            bl::canvas& get_canvas() const;
+            bl::display& get_display() const;
+            bl::time& get_time() const;
+
         private:
             void init();
             void tick();
