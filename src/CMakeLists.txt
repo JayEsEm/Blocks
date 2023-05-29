@@ -18,6 +18,8 @@ FetchContent_Declare(
     GIT_TAG         v4.5.0
 )
 
+set(FLECS_SHARED OFF CACHE INTERNAL "Will only use static binaries.")
+
 add_library(
     blocks-src
     STATIC
