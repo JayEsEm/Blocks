@@ -11,13 +11,31 @@ bl::scns::main::main(bl::game& game)
 void bl::scns::main::init()
 {
     {
-        flecs::entity block = world.entity();
+        flecs::entity background = world.entity();
 
-        block.add<bl::ecs::drawable>();
+        background.add<bl::ecs::drawable>();
+        background.add<bl::ecs::filled>();
 
-        block.set<bl::ecs::position>({ 0.f, 0.f });
-        block.set<bl::ecs::box>({ 64.f, 64.f });
-        block.set<bl::ecs::color>({ 0xFF, 0x00, 0x00, 0xFF });
+        background.set<bl::ecs::position>({ 0.f, 0.f });
+        background.set<bl::ecs::box>({ 190.f, 342.f });
+        background.set<bl::ecs::color>({ 0xDE, 0xDE, 0xDE, 0xFF });
+    }
+
+    {
+        for (unsigned int i = 0; i < 18; i++)
+        {
+            for (unsigned int j = 0; j < 10; j++)
+            {
+                flecs::entity cell = world.entity();
+
+                cell.add<bl::ecs::drawable>();
+                cell.add<bl::ecs::hollow>();
+
+                cell.set<bl::ecs::position>({ 19.f * (float)(j), 19.f * (float)(i)});
+                cell.set<bl::ecs::box>({ 20.f, 20.f });
+                cell.set<bl::ecs::color>({ 0xFF, 0xFF, 0xFF, 0xFF });
+            }
+        }
     }
 
     {

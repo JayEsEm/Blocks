@@ -15,6 +15,19 @@ void bl::ecs::renderer::install_on(flecs::world& world)
     world.system<bl::ecs::position, bl::ecs::box, bl::ecs::color>()
         .kind(flecs::OnStore)
         .with<bl::ecs::drawable>()
+        .with<bl::ecs::filled>()
+        .each(
+            [&](bl::ecs::position& pos, bl::ecs::box& box, bl::ecs::color& col)
+            {
+                canvas.set_draw_color(col);
+                canvas.fill_rect(pos.x, pos.y, box.w, box.h);
+            }
+        );
+
+    world.system<bl::ecs::position, bl::ecs::box, bl::ecs::color>()
+        .kind(flecs::OnStore)
+        .with<bl::ecs::drawable>()
+        .with<bl::ecs::hollow>()
         .each(
             [&](bl::ecs::position& pos, bl::ecs::box& box, bl::ecs::color& col)
             {
