@@ -12,13 +12,14 @@ bl::ecs::renderer::renderer(bl::canvas& canvas)
 
 void bl::ecs::renderer::install_on(flecs::world& world)
 {
-    world.system()
+    world.system<bl::ecs::position, bl::ecs::box, bl::ecs::color>()
         .kind(flecs::OnStore)
         .with<bl::ecs::drawable>()
-        .iter([&](flecs::iter& iter) { render(iter); });
-}
-
-void bl::ecs::renderer::render(flecs::iter& iter)
-{
-    (void)(iter);
+        .each(
+            [&](bl::ecs::position& pos, bl::ecs::box& box, bl::ecs::color& col)
+            {
+                canvas.set_fill_color(col);
+                canvas.draw_rect(pos.x, pos.y, box.w, box.h);
+            }
+        );
 }

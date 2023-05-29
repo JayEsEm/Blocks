@@ -6,8 +6,8 @@ namespace bl::ecs
     struct box
     {
         public:
-            int w;
-            int h;
+            float w;
+            float h;
     };
 }
 

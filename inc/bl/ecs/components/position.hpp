@@ -6,8 +6,8 @@ namespace bl::ecs
     struct position
     {
         public:
-            int x;
-            int y;
+            float x;
+            float y;
     };
 }
 

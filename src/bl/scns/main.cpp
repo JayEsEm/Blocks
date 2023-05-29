@@ -15,8 +15,8 @@ void bl::scns::main::init()
 
         block.add<bl::ecs::drawable>();
 
-        block.set<bl::ecs::position>({ 0, 0 });
-        block.set<bl::ecs::box>({ 64, 64 });
+        block.set<bl::ecs::position>({ 0.f, 0.f });
+        block.set<bl::ecs::box>({ 64.f, 64.f });
         block.set<bl::ecs::color>({ 0xFF, 0x00, 0x00, 0xFF });
     }
 
