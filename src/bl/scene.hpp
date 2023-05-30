@@ -7,11 +7,11 @@
 #include <flecs.h>
 
 #include "bl/ecs/system.hpp"
+#include "bl/game.hpp"
 
 namespace bl
 {
     class canvas;
-    class game;
 }
 
 namespace bl
@@ -30,7 +30,7 @@ namespace bl
             void add_logic_system();
 
             template <typename T>
-            void add_render_system(bl::canvas& canvas);
+            void add_render_system();
 
         protected:
             bl::game& owner;
@@ -51,9 +51,9 @@ namespace bl
     }
 
     template <typename T>
-    inline void scene::add_render_system(bl::canvas& canvas)
+    inline void scene::add_render_system()
     {
-        auto system = std::make_unique<T>(canvas);
+        auto system = std::make_unique<T>(owner.get_canvas());
         {
             system->install_on(world);
         }
