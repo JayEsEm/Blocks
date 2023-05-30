@@ -6,7 +6,7 @@
 #include "bl/ecs/all.hpp"
 
 bl::ecs::renderer::renderer(bl::canvas& canvas)
-    : canvas(canvas)
+    : system(canvas)
 {
 }
 

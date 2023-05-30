@@ -21,6 +21,6 @@ void bl::scns::main::init()
     }
 
     {
-        add_render_system<bl::ecs::renderer>();
+        add_system<bl::ecs::renderer>();
     }
 }

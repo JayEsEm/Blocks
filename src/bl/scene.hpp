@@ -27,10 +27,7 @@ namespace bl
 
         protected:
             template <typename T>
-            void add_logic_system();
-
-            template <typename T>
-            void add_render_system();
+            void add_system();
 
         protected:
             bl::game& owner;
@@ -41,17 +38,7 @@ namespace bl
     };
 
     template <typename T>
-    inline void scene::add_logic_system()
-    {
-        auto system = std::make_unique<T>();
-        {
-            system->install_on(world);
-        }
-        systems.push_back(std::move(system));
-    }
-
-    template <typename T>
-    inline void scene::add_render_system()
+    inline void scene::add_system()
     {
         auto system = std::make_unique<T>(owner.get_canvas());
         {

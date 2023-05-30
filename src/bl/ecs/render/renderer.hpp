@@ -21,9 +21,6 @@ namespace bl::ecs
             renderer(bl::canvas& canvas);
 
             void install_on(flecs::world& world) override;
-
-        private:
-            bl::canvas& canvas;
     };
 }
 
