@@ -15,23 +15,27 @@ void bl::ecs::playground::add_to(flecs::world& world)
         {
             flecs::entity cell = world.entity();
 
-            flecs::entity bg = world.entity();
-            flecs::entity fg = world.entity();
+            {
+                flecs::entity bg = world.entity();
+                flecs::entity fg = world.entity();
 
-            float x = static_cast<float>(19 * j);
-            float y = static_cast<float>(19 * i);
+                {
+                    float x = static_cast<float>(19 * j);
+                    float y = static_cast<float>(19 * i);
 
-            bg.set<bl::ecs::position>({ x, y });
-            fg.set<bl::ecs::position>({ x, y });
+                    bg.set<bl::ecs::position>({ x, y });
+                    fg.set<bl::ecs::position>({ x + 1, y + 1 });
+                }
 
-            bg.add<bl::ecs::renderable>();
-            fg.add<bl::ecs::renderable>();
+                bg.add<bl::ecs::renderable>();
+                fg.add<bl::ecs::renderable>();
 
-            bg.set<bl::ecs::rectangle>({ 20, 20, true, bl::colors::gray });
-            fg.set<bl::ecs::rectangle>({ 20, 20, false, bl::colors::white });
+                bg.set<bl::ecs::rectangle>({ 20, 20, false, bl::colors::bg });
+                fg.set<bl::ecs::rectangle>({ 18, 18, true, bl::colors::n });
 
-            bg.child_of(cell);
-            fg.child_of(cell);
+                bg.child_of(cell);
+                fg.child_of(cell);
+            }
 
             cell.child_of(playground);
         }
