@@ -3,7 +3,7 @@
 
 namespace bl::ecs
 {
-    struct position
+    struct position final
     {
         public:
             float x;

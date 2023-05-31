@@ -5,7 +5,7 @@
 
 namespace bl::ecs
 {
-    struct rectangle
+    struct rectangle final
     {
         public:
             float w;
