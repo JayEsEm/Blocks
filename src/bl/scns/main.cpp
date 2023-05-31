@@ -12,12 +12,7 @@ bl::scns::main::main(bl::game& game)
 void bl::scns::main::init()
 {
     {
-        flecs::entity r = world.entity();
-
-        r.add<bl::ecs::renderable>();
-
-        r.set<bl::ecs::position>({ 0.f, 0.f });
-        r.set<bl::ecs::rectangle>({ 64.f, 64.f, true, bl::colors::white });
+        bl::ecs::playground::add_to(world);
     }
 
     {

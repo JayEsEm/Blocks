@@ -1,6 +1,7 @@
 #ifndef F42B4C4E_3E70_43B9_9668_1134BBC56688
 #define F42B4C4E_3E70_43B9_9668_1134BBC56688
 
+#include "bl/ecs/logic/playground.hpp"
 #include "bl/ecs/logic/position.hpp"
 
 #include "bl/ecs/render/rectangle.hpp"

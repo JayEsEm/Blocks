@@ -30,6 +30,7 @@ add_library(
     bl/scene.cpp
     bl/time.cpp
     bl/ecs/system.cpp
+    bl/ecs/logic/playground.cpp
     bl/ecs/render/renderer.cpp
     bl/scns/main.cpp
     bl/scns/null.cpp
