@@ -14,7 +14,7 @@ namespace bl
             unsigned char a;
 
         public:
-            raylib::Color to_raylib()
+            raylib::Color to_raylib() const
             {
                 return raylib::Color(r, g, b, a);
             }

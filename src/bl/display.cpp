@@ -2,6 +2,8 @@
 
 #include <raylib.hpp>
 
+#include "bl/colors.hpp"
+
 bl::display::display(raylib::Window& window)
     : window(window)
 {
@@ -15,7 +17,7 @@ bool bl::display::should_close() const
 void bl::display::begin_drawing()
 {
     window.BeginDrawing();
-    window.ClearBackground(raylib::Color::Black());
+    window.ClearBackground(bl::colors::bg.to_raylib());
 }
 
 void bl::display::end_drawing()
