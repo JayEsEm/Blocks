@@ -11,11 +11,4 @@ bl::scns::main::main(bl::game& game)
 
 void bl::scns::main::init()
 {
-    {
-        bl::ecs::playground::add_to(world);
-    }
-
-    {
-        add_system<bl::ecs::renderer>();
-    }
 }
