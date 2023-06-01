@@ -1,7 +1,7 @@
 #ifndef FA78845F_1B74_4323_99C5_02B98C8DA5B5
 #define FA78845F_1B74_4323_99C5_02B98C8DA5B5
 
-#include <entt.hpp>
+#include <entt/fwd.hpp>
 
 namespace bl
 {

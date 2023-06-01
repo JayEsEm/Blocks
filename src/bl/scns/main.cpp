@@ -11,4 +11,5 @@ bl::scns::main::main(bl::game& game)
 
 void bl::scns::main::init()
 {
+    bl::ecs::playfield::add_to(world);
 }
