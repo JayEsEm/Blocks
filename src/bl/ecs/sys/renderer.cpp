@@ -34,9 +34,54 @@ namespace bl::ecs::sys
                     float x = pos.x + (w * static_cast<float>(j));
                     float y = pos.y + (h * static_cast<float>(i));
 
-                    canvas.set_draw_color(bl::colors::l);
+                    bl::color color = get_color_for(grd.data[i][j]);
+
+                    canvas.set_draw_color(color);
                     canvas.fill_rect(x + 1, y + 1, w - 1, h - 1);
                 }
+            }
+        }
+    }
+
+    bl::color renderer::get_color_for(bl::ecs::cmp::grid::cell cell) const
+    {
+        switch (cell)
+        {
+            case cmp::grid::cell::n:
+            {
+                return bl::colors::n;
+            }
+            case cmp::grid::cell::i:
+            {
+                return bl::colors::i;
+            }
+            case cmp::grid::cell::j:
+            {
+                return bl::colors::j;
+            }
+            case cmp::grid::cell::l:
+            {
+                return bl::colors::l;
+            }
+            case cmp::grid::cell::o:
+            {
+                return bl::colors::o;
+            }
+            case cmp::grid::cell::s:
+            {
+                return bl::colors::s;
+            }
+            case cmp::grid::cell::t:
+            {
+                return bl::colors::t;
+            }
+            case cmp::grid::cell::z:
+            {
+                return bl::colors::z;
+            }
+            default:
+            {
+                return bl::colors::n;
             }
         }
     }
