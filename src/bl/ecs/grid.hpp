@@ -3,26 +3,14 @@
 
 #include <array>
 
+#include "bl/ecs/cell.hpp"
+
 namespace bl::ecs
 {
-    template <unsigned rows, unsigned cols>
     struct grid final
     {
         public:
-            enum class cell
-            {
-                n,
-                i,
-                j,
-                l,
-                o,
-                s,
-                t,
-                z
-            };
-
-        public:
-            std::array<std::array<grid::cell, cols>, rows> data;
+            std::array<std::array<bl::ecs::cell, 10>, 18> data;
     };
 }
 
