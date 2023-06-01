@@ -29,6 +29,7 @@ add_library(
     bl/main.cpp
     bl/scene.cpp
     bl/time.cpp
+    bl/ecs/playfield.cpp
     bl/ecs/system.cpp
     bl/scns/main.cpp
     bl/scns/null.cpp
