@@ -3,15 +3,17 @@
 
 #include <raylib.hpp>
 
+#include "bl/types.hpp"
+
 namespace bl
 {
     struct color
     {
         public:
-            unsigned char r;
-            unsigned char g;
-            unsigned char b;
-            unsigned char a;
+            ubyte r;
+            ubyte g;
+            ubyte b;
+            ubyte a;
 
         public:
             raylib::Color to_raylib() const
