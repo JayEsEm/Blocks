@@ -14,5 +14,7 @@ namespace bl::scns
     void main::init()
     {
         bl::ecs::ent::playfield::add_to(world);
+
+        add_system<bl::ecs::sys::renderer>();
     }
 }

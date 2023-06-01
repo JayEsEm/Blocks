@@ -14,6 +14,7 @@ namespace bl::ecs::ent
 
             world.emplace<cmp::grid>(ent);
             world.emplace<cmp::position>(ent, 0.f, 0.f);
+            world.emplace<cmp::renderable>(ent);
         }
     }
 }

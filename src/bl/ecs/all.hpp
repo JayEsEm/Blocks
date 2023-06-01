@@ -3,7 +3,10 @@
 
 #include "bl/ecs/cmp/grid.hpp"
 #include "bl/ecs/cmp/position.hpp"
+#include "bl/ecs/cmp/renderable.hpp"
 
 #include "bl/ecs/ent/playfield.hpp"
+
+#include "bl/ecs/sys/renderer.hpp"
 
 #endif

@@ -1,0 +1,6 @@
+#ifndef E37F7CE9_74B5_40FB_844C_3CC659694F62
+#define E37F7CE9_74B5_40FB_844C_3CC659694F62
+
+#define UNUSED_ARG(x) (void)(x);
+
+#endif
