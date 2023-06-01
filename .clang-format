@@ -10,12 +10,15 @@ AlwaysBreakTemplateDeclarations: Yes
 BinPackArguments: False
 BinPackParameters: False
 BraceWrapping:
+  AfterCaseLabel: True
   BeforeLambdaBody: True
 BreakConstructorInitializers: BeforeComma
 Cpp11BracedListStyle: False
 ColumnLimit: 80
 FixNamespaceComments: False
 IndentAccessModifiers: True
+IndentCaseBlocks: False
+IndentCaseLabels: True
 LambdaBodyIndentation: Signature
 NamespaceIndentation: All
 PointerAlignment: Left
