@@ -4,12 +4,15 @@
 #include "bl/ecs/all.hpp"
 #include "bl/game.hpp"
 
-bl::scns::main::main(bl::game& game)
-    : null(game)
+namespace bl::scns
 {
-}
+    main::main(bl::game& game)
+        : null(game)
+    {
+    }
 
-void bl::scns::main::init()
-{
-    bl::ecs::playfield::add_to(world);
+    void main::init()
+    {
+        bl::ecs::ent::playfield::add_to(world);
+    }
 }

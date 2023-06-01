@@ -4,10 +4,16 @@
 
 #include "bl/ecs/all.hpp"
 
-void bl::ecs::playfield::add_to(entt::registry& world)
+namespace bl::ecs::ent
 {
-    auto const ent = world.create();
+    namespace playfield
+    {
+        void add_to(entt::registry& world)
+        {
+            auto const ent = world.create();
 
-    world.emplace<bl::ecs::grid>(ent);
-    world.emplace<bl::ecs::position>(ent, 0.f, 0.f);
+            world.emplace<cmp::grid>(ent);
+            world.emplace<cmp::position>(ent, 0.f, 0.f);
+        }
+    }
 }

@@ -7,18 +7,21 @@
 
 #include "bl/game.hpp"
 
-void bl::main()
+namespace bl
 {
-    raylib::Window window(800, 450, "Blocks!");
+    void main()
     {
-        window.SetTargetFPS(60);
-
-        bl::display display(window);
-        bl::time time(window);
+        raylib::Window window(800, 450, "Blocks!");
         {
-            bl::game game(display, time);
+            window.SetTargetFPS(60);
+
+            bl::display display(window);
+            bl::time time(window);
             {
-                game.run();
+                bl::game game(display, time);
+                {
+                    game.run();
+                }
             }
         }
     }

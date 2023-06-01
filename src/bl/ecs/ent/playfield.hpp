@@ -3,9 +3,12 @@
 
 #include <entt/fwd.hpp>
 
-namespace bl::ecs::playfield
+namespace bl::ecs::ent
 {
-    void add_to(entt::registry& world);
+    namespace playfield
+    {
+        void add_to(entt::registry& world);
+    }
 }
 
 #endif

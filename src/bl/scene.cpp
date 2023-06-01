@@ -1,22 +1,25 @@
 #include "bl/scene.hpp"
 
-bl::scene::scene(bl::game& owner)
-    : owner(owner)
+namespace bl
 {
-}
-
-void bl::scene::update(float dt)
-{
-    for (auto&& system : systems)
+    scene::scene(bl::game& owner)
+        : owner(owner)
     {
-        system->update(world, dt);
     }
-}
 
-void bl::scene::render(bl::canvas& canvas)
-{
-    for (auto&& system : systems)
+    void scene::update(float dt)
     {
-        system->render(world, canvas);
+        for (auto&& system : systems)
+        {
+            system->update(world, dt);
+        }
+    }
+
+    void scene::render(bl::canvas& canvas)
+    {
+        for (auto&& system : systems)
+        {
+            system->render(world, canvas);
+        }
     }
 }

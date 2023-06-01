@@ -3,7 +3,7 @@
 
 #include <array>
 
-namespace bl::ecs
+namespace bl::ecs::cmp
 {
     struct grid final
     {
@@ -21,7 +21,7 @@ namespace bl::ecs
             };
 
         public:
-            std::array<std::array<bl::ecs::grid::cell, 10>, 18> data;
+            std::array<std::array<bl::ecs::cmp::grid::cell, 10>, 18> data;
     };
 }
 
