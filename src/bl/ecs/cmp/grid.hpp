@@ -21,7 +21,7 @@ namespace bl::ecs::cmp
             };
 
         public:
-            std::array<std::array<bl::ecs::cmp::grid::cell, 10>, 18> data;
+            std::array<std::array<grid::cell, 10>, 18> data;
     };
 }
 
