@@ -32,10 +32,10 @@ namespace bl::ecs::sys
                     float h = 20.f;
 
                     float x = pos.x + (w * static_cast<float>(j));
-                    float y = pos.y = (h * static_cast<float>(i));
+                    float y = pos.y + (h * static_cast<float>(i));
 
                     canvas.set_draw_color(bl::colors::l);
-                    canvas.fill_rect(x, y, w, h);
+                    canvas.fill_rect(x + 1, y + 1, w - 1, h - 1);
                 }
             }
         }
