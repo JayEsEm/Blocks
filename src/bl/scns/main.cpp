@@ -11,4 +11,10 @@ bl::scns::main::main(bl::game& game)
 
 void bl::scns::main::init()
 {
+    {
+        flecs::entity playfield = world.entity();
+
+        playfield.add<bl::ecs::grid<18, 10>>();
+        playfield.set<bl::ecs::position>({ 0, 0 });
+    }
 }
