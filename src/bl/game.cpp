@@ -48,11 +48,15 @@ void bl::game::init()
 
 void bl::game::tick()
 {
-    float dt = time.get_frame_time();
+    {
+        float dt = time.get_frame_time();
+
+        scene->update(dt);
+    }
 
     display.begin_drawing();
     {
-        scene->process(dt);
+        scene->render(display);
     }
     display.end_drawing();
 }

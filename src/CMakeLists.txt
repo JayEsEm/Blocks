@@ -1,9 +1,9 @@
 include(FetchContent)
 
 FetchContent_Declare(
-    flecs
-    GIT_REPOSITORY  https://github.com/SanderMertens/flecs.git
-    GIT_TAG         v3.2.3
+    entt
+    GIT_REPOSITORY  https://github.com/skypjack/entt.git
+    GIT_TAG         v3.11.1
 )
 
 FetchContent_Declare(
@@ -18,8 +18,6 @@ FetchContent_Declare(
     GIT_TAG         v4.5.0
 )
 
-set(FLECS_SHARED OFF CACHE INTERNAL "Will only use static binaries.")
-
 add_library(
     blocks-src
     STATIC
@@ -29,12 +27,11 @@ add_library(
     bl/main.cpp
     bl/scene.cpp
     bl/time.cpp
-    bl/ecs/system.cpp
     bl/scns/main.cpp
     bl/scns/null.cpp
 )
 
-FetchContent_MakeAvailable(flecs)
+FetchContent_MakeAvailable(entt)
 FetchContent_MakeAvailable(raylib)
 FetchContent_MakeAvailable(raylib-cpp)
 
@@ -63,7 +60,7 @@ target_link_libraries(
 target_link_libraries(
     blocks-src
     PRIVATE
-    flecs::flecs_static
+    EnTT::EnTT
 )
 
 target_link_libraries(

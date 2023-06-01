@@ -5,7 +5,18 @@ bl::scene::scene(bl::game& owner)
 {
 }
 
-void bl::scene::process(float dt)
+void bl::scene::update(float dt)
 {
-    world.progress(dt);
+    for (auto&& system : systems)
+    {
+        system->update(world, dt);
+    }
+}
+
+void bl::scene::render(bl::canvas& canvas)
+{
+    for (auto&& system : systems)
+    {
+        system->render(world, canvas);
+    }
 }

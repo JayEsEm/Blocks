@@ -4,7 +4,7 @@
 #include <memory>
 #include <vector>
 
-#include <flecs.h>
+#include <entt.hpp>
 
 #include "bl/ecs/system.hpp"
 #include "bl/game.hpp"
@@ -23,7 +23,8 @@ namespace bl
 
             virtual void init() = 0;
 
-            void process(float dt);
+            void update(float dt);
+            void render(bl::canvas& canvas);
 
         protected:
             template <typename T>
@@ -31,7 +32,7 @@ namespace bl
 
         protected:
             bl::game& owner;
-            flecs::world world;
+            entt::registry world;
 
         private:
             std::vector<std::unique_ptr<bl::ecs::system>> systems;
@@ -40,9 +41,8 @@ namespace bl
     template <typename T>
     inline void scene::add_system()
     {
-        auto system = std::make_unique<T>(owner.get_canvas());
+        auto system = std::make_unique<T>();
         {
-            system->install_on(world);
         }
         systems.push_back(std::move(system));
     }
