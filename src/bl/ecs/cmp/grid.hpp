@@ -3,12 +3,21 @@
 
 #include <array>
 
+#include "bl/types.hpp"
+
 namespace bl::ecs::cmp
 {
     struct grid final
     {
         public:
-            enum class cell
+            struct cell final
+            {
+                public:
+                    uint x;
+                    uint y;
+            };
+
+            enum class value
             {
                 n,
                 i,
@@ -21,7 +30,7 @@ namespace bl::ecs::cmp
             };
 
         public:
-            std::array<std::array<grid::cell, 10>, 18> data;
+            std::array<std::array<grid::value, 10>, 18> data;
     };
 }
 

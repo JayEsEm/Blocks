@@ -43,39 +43,39 @@ namespace bl::ecs::sys
         }
     }
 
-    bl::color renderer::get_color_for(bl::ecs::cmp::grid::cell cell) const
+    bl::color renderer::get_color_for(bl::ecs::cmp::grid::value value) const
     {
-        switch (cell)
+        switch (value)
         {
-            case cmp::grid::cell::n:
+            case cmp::grid::value::n:
             {
                 return bl::colors::n;
             }
-            case cmp::grid::cell::i:
+            case cmp::grid::value::i:
             {
                 return bl::colors::i;
             }
-            case cmp::grid::cell::j:
+            case cmp::grid::value::j:
             {
                 return bl::colors::j;
             }
-            case cmp::grid::cell::l:
+            case cmp::grid::value::l:
             {
                 return bl::colors::l;
             }
-            case cmp::grid::cell::o:
+            case cmp::grid::value::o:
             {
                 return bl::colors::o;
             }
-            case cmp::grid::cell::s:
+            case cmp::grid::value::s:
             {
                 return bl::colors::s;
             }
-            case cmp::grid::cell::t:
+            case cmp::grid::value::t:
             {
                 return bl::colors::t;
             }
-            case cmp::grid::cell::z:
+            case cmp::grid::value::z:
             {
                 return bl::colors::z;
             }

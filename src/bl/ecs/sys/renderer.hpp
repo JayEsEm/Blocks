@@ -14,7 +14,7 @@ namespace bl::ecs::sys
             void render(entt::registry& world, bl::canvas& canvas) override;
 
         private:
-            bl::color get_color_for(bl::ecs::cmp::grid::cell cell) const;
+            bl::color get_color_for(bl::ecs::cmp::grid::value value) const;
     };
 }
 
