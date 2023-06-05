@@ -12,7 +12,8 @@ namespace bl::ecs::ent
         {
             auto const ent = world.create();
 
-            world.emplace<cmp::piece>(ent, 0u, cmp::piece::type::o);
+            world.emplace<cmp::grid::cell>(ent, 0U, 0U);
+            world.emplace<cmp::piece>(ent, 0U, cmp::piece::type::o);
         }
     }
 }
