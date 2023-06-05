@@ -7,7 +7,7 @@ namespace bl::ecs::ent
 {
     namespace playfield
     {
-        void add_to(entt::registry& world);
+        entt::entity add_to(entt::registry& world);
     }
 }
 

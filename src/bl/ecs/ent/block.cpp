@@ -8,12 +8,14 @@ namespace bl::ecs::ent
 {
     namespace block
     {
-        void add_to(entt::registry& world)
+        entt::entity add_to(entt::registry& world)
         {
             auto const ent = world.create();
 
             world.emplace<cmp::grid::cell>(ent, 0U, 0U);
             world.emplace<cmp::piece>(ent, 0U, cmp::piece::shape::o);
+
+            return ent;
         }
     }
 }

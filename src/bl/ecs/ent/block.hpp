@@ -7,7 +7,7 @@ namespace bl::ecs::ent
 {
     namespace block
     {
-        void add_to(entt::registry& world);
+        entt::entity add_to(entt::registry& world);
     }
 }
 
