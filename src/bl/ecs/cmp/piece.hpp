@@ -8,7 +8,7 @@ namespace bl::ecs::cmp
     struct piece final
     {
         public:
-            enum class type
+            enum class shape
             {
                 i,
                 j,
@@ -21,7 +21,7 @@ namespace bl::ecs::cmp
 
         public:
             uint rotation;
-            piece::type type;
+            piece::shape type;
     };
 }
 

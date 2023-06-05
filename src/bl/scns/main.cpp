@@ -16,6 +16,7 @@ namespace bl::scns
         bl::ecs::ent::block::add_to(world);
         bl::ecs::ent::playfield::add_to(world);
 
+        add_system<bl::ecs::sys::printer>();
         add_system<bl::ecs::sys::renderer>();
     }
 }

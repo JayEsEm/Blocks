@@ -9,6 +9,7 @@
 #include "bl/ecs/ent/block.hpp"
 #include "bl/ecs/ent/playfield.hpp"
 
+#include "bl/ecs/sys/printer.hpp"
 #include "bl/ecs/sys/renderer.hpp"
 
 #endif
