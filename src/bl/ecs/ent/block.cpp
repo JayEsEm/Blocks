@@ -12,8 +12,8 @@ namespace bl::ecs::ent
         {
             auto const ent = world.create();
 
+            world.emplace<cmp::block>(ent, 0U, cmp::block::shape::o);
             world.emplace<cmp::grid::cell>(ent, 0U, 0U);
-            world.emplace<cmp::piece>(ent, 0U, cmp::piece::shape::o);
 
             return ent;
         }

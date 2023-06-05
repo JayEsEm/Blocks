@@ -13,6 +13,7 @@ namespace bl::ecs::ent
             auto const ent = world.create();
 
             world.emplace<cmp::grid>(ent);
+            world.emplace<cmp::playfield>(ent, entt::null);
             world.emplace<cmp::position>(ent, 0.f, 0.f);
             world.emplace<cmp::renderable>(ent);
 

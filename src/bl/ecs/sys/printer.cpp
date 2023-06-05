@@ -16,7 +16,7 @@ namespace bl::ecs::sys
         UNUSED_ARG(canvas);
     }
 
-    printer::imprint printer::get_imprint_for(cmp::piece::shape shape)
+    printer::imprint printer::get_imprint_for(cmp::block::shape shape)
     {
         UNUSED_ARG(shape);
 

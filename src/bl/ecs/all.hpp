@@ -1,8 +1,9 @@
 #ifndef F42B4C4E_3E70_43B9_9668_1134BBC56688
 #define F42B4C4E_3E70_43B9_9668_1134BBC56688
 
+#include "bl/ecs/cmp/block.hpp"
 #include "bl/ecs/cmp/grid.hpp"
-#include "bl/ecs/cmp/piece.hpp"
+#include "bl/ecs/cmp/playfield.hpp"
 #include "bl/ecs/cmp/position.hpp"
 #include "bl/ecs/cmp/renderable.hpp"
 

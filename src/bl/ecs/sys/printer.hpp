@@ -3,8 +3,8 @@
 
 #include <array>
 
+#include "bl/ecs/cmp/block.hpp"
 #include "bl/ecs/cmp/grid.hpp"
-#include "bl/ecs/cmp/piece.hpp"
 #include "bl/ecs/system.hpp"
 
 namespace bl::ecs::sys
@@ -19,7 +19,7 @@ namespace bl::ecs::sys
             void render(entt::registry& world, bl::canvas& canvas) override;
 
         private:
-            printer::imprint get_imprint_for(cmp::piece::shape shape);
+            printer::imprint get_imprint_for(cmp::block::shape shape);
     };
 }
 

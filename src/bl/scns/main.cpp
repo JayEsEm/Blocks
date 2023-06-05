@@ -13,8 +13,10 @@ namespace bl::scns
 
     void main::init()
     {
-        bl::ecs::ent::block::add_to(world);
-        bl::ecs::ent::playfield::add_to(world);
+        auto block = bl::ecs::ent::block::add_to(world);
+        auto field = bl::ecs::ent::playfield::add_to(world);
+
+        world.replace<bl::ecs::cmp::playfield>(field, block);
 
         add_system<bl::ecs::sys::printer>();
         add_system<bl::ecs::sys::renderer>();
