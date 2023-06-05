@@ -10,7 +10,7 @@ namespace bl::ecs::ent
     {
         entt::entity add_to(entt::registry& world)
         {
-            auto const ent = world.create();
+            auto ent = world.create();
 
             world.emplace<cmp::block>(ent, 0U, cmp::block::shape::o);
             world.emplace<cmp::grid::cell>(ent, 0U, 0U);

@@ -8,6 +8,7 @@
 #include "bl/ecs/cmp/renderable.hpp"
 
 #include "bl/ecs/ent/block.hpp"
+#include "bl/ecs/ent/debris.hpp"
 #include "bl/ecs/ent/playfield.hpp"
 
 #include "bl/ecs/sys/printer.hpp"

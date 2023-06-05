@@ -8,7 +8,8 @@ namespace bl::ecs::cmp
     struct playfield final
     {
         public:
-            entt::entity active_block;
+            entt::entity block;
+            entt::entity debris;
     };
 }
 

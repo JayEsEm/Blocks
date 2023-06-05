@@ -22,7 +22,7 @@ namespace bl::ecs::sys
         for (auto field : fields)
         {
             auto& grid = fields.get<cmp::grid>(field);
-            auto& target = fields.get<cmp::playfield>(field).active_block;
+            auto& target = fields.get<cmp::playfield>(field).block;
 
             if (target == entt::null)
             {
