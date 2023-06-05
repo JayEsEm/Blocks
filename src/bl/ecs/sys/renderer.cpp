@@ -9,12 +9,6 @@
 
 namespace bl::ecs::sys
 {
-    void renderer::update(entt::registry& world, float dt)
-    {
-        UNUSED_ARG(world);
-        UNUSED_ARG(dt);
-    }
-
     void renderer::render(entt::registry& world, bl::canvas& canvas)
     {
         auto view = world.view<cmp::grid, cmp::position, cmp::renderable>();

@@ -16,7 +16,6 @@ namespace bl::ecs::sys
 
         public:
             void update(entt::registry& world, float dt) override;
-            void render(entt::registry& world, bl::canvas& canvas) override;
 
         private:
             void print_active_block(entt::registry& world);

@@ -12,9 +12,12 @@ namespace bl::ecs
 {
     class system
     {
+        protected:
+            system() = default;
+
         public:
-            virtual void update(entt::registry& world, float dt) = 0;
-            virtual void render(entt::registry& world, bl::canvas& canvas) = 0;
+            virtual void update(entt::registry& world, float dt);
+            virtual void render(entt::registry& world, bl::canvas& canvas);
     };
 }
 

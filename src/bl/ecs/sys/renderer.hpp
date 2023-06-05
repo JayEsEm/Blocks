@@ -10,7 +10,6 @@ namespace bl::ecs::sys
     class renderer final : public bl::ecs::system
     {
         public:
-            void update(entt::registry& world, float dt) override;
             void render(entt::registry& world, bl::canvas& canvas) override;
 
         private:

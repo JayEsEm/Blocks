@@ -14,12 +14,6 @@ namespace bl::ecs::sys
         print_active_block(world);
     }
 
-    void printer::render(entt::registry& world, bl::canvas& canvas)
-    {
-        UNUSED_ARG(world);
-        UNUSED_ARG(canvas);
-    }
-
     void printer::print_active_block(entt::registry& world)
     {
         auto fields = world.view<cmp::grid, cmp::playfield>();
