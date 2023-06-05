@@ -11,6 +11,17 @@ namespace bl::ecs::sys
     {
         UNUSED_ARG(dt);
 
+        print_active_block(world);
+    }
+
+    void printer::render(entt::registry& world, bl::canvas& canvas)
+    {
+        UNUSED_ARG(world);
+        UNUSED_ARG(canvas);
+    }
+
+    void printer::print_active_block(entt::registry& world)
+    {
         auto fields = world.view<cmp::grid, cmp::playfield>();
         auto blocks = world.view<cmp::block, cmp::grid::cell>();
 
@@ -49,13 +60,7 @@ namespace bl::ecs::sys
         }
     }
 
-    void printer::render(entt::registry& world, bl::canvas& canvas)
-    {
-        UNUSED_ARG(world);
-        UNUSED_ARG(canvas);
-    }
-
-    printer::imprint printer::get_imprint_for(cmp::block::shape shape)
+    printer::imprint printer::get_imprint_for(cmp::block::shape shape) const
     {
         using enum bl::ecs::cmp::grid::value;
 

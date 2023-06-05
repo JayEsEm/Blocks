@@ -19,7 +19,9 @@ namespace bl::ecs::sys
             void render(entt::registry& world, bl::canvas& canvas) override;
 
         private:
-            printer::imprint get_imprint_for(cmp::block::shape shape);
+            void print_active_block(entt::registry& world);
+
+            printer::imprint get_imprint_for(cmp::block::shape shape) const;
     };
 }
 
