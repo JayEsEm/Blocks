@@ -11,10 +11,11 @@ namespace bl::ecs::sys
     {
         UNUSED_ARG(dt);
 
-        print_active_block(world);
+        print_block(world);
+        print_debris(world);
     }
 
-    void printer::print_active_block(entt::registry& world)
+    void printer::print_block(entt::registry& world)
     {
         auto fields = world.view<cmp::grid, cmp::playfield>();
         auto blocks = world.view<cmp::block, cmp::grid::cell>();
@@ -35,41 +36,32 @@ namespace bl::ecs::sys
                 {
                     continue;
                 }
-
-                auto const& info = blocks.get<cmp::block>(block);
-                auto const& cell = blocks.get<cmp::grid::cell>(block);
-
-                {
-                    auto imprint = get_imprint_for(info.type);
-
-                    for (size_t i = 0; i < imprint.size(); i++)
-                    {
-                        for (size_t j = 0; j < imprint.size(); j++)
-                        {
-                            grid.data[cell.x + j][cell.y + i] = imprint[i][j];
-                        }
-                    }
-                }
             }
         }
     }
 
-    printer::imprint printer::get_imprint_for(cmp::block::shape shape) const
+    void printer::print_debris(entt::registry& world)
     {
-        using enum bl::ecs::cmp::grid::value;
+        UNUSED_ARG(world);
+    }
 
-        UNUSED_ARG(shape);
+    void printer::merge(cmp::grid const& source, cmp::grid& target)
+    {
+        using enum cmp::grid::value;
 
-        // clang-format off
-        return
+        for (size_t i = 0; i < source.data.size(); i++)
         {
+            for (size_t j = 0; j < source.data[i].size(); j++)
             {
-                { n, n, n, n },
-                { n, o, o, n },
-                { n, o, o, n },
-                { n, n, n, n },
+                auto value = source.data[i][j];
+
+                if (value == n)
+                {
+                    continue;
+                }
+
+                target.data[i][j] = value;
             }
-        };
-        // clang-format on
+        }
     }
 }

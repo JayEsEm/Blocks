@@ -11,16 +11,14 @@ namespace bl::ecs::sys
 {
     class printer final : public bl::ecs::system
     {
-        private:
-            using imprint = std::array<std::array<cmp::grid::value, 4>, 4>;
-
         public:
             void update(entt::registry& world, float dt) override;
 
         private:
-            void print_active_block(entt::registry& world);
+            void print_block(entt::registry& world);
+            void print_debris(entt::registry& world);
 
-            printer::imprint get_imprint_for(cmp::block::shape shape) const;
+            void merge(cmp::grid const& source, cmp::grid& target);
     };
 }
 
