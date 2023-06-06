@@ -16,11 +16,10 @@ namespace bl::ecs::cmp
                 o,
                 s,
                 t,
-                z
+                z,
             };
 
         public:
-            uint rotation;
             block::shape type;
     };
 }

@@ -10,8 +10,6 @@ namespace bl::ecs::ent
     {
         auto ent = world.create();
 
-        world.emplace<cmp::grid>(ent);
-
         return ent;
     }
 }

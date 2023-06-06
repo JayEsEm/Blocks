@@ -30,8 +30,6 @@ add_library(
     bl/ecs/system.cpp
     bl/ecs/ent/block.cpp
     bl/ecs/ent/debris.cpp
-    bl/ecs/ent/playfield.cpp
-    bl/ecs/sys/printer.cpp
     bl/ecs/sys/renderer.cpp
     bl/scns/main.cpp
     bl/scns/null.cpp
