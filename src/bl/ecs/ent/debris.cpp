@@ -7,9 +7,11 @@ namespace bl::ecs::ent
 {
     entt::entity debris::add_to(entt::registry& world)
     {
+        using namespace bl::ecs::cmp;
+
         auto ent = world.create();
 
-        world.emplace<cmp::main::board>(ent);
+        world.emplace<main::board>(ent);
 
         return ent;
     }

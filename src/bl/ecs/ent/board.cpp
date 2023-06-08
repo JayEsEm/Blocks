@@ -9,12 +9,13 @@ namespace bl::ecs::ent
     {
         entt::entity add_to(entt::registry& world)
         {
+            using namespace bl::ecs::cmp;
+
             auto ent = world.create();
 
-            world.emplace<cmp::main::board>(ent);
-            world.emplace<cmp::position>(ent, 0.f, 0.f);
-
-            world.emplace<cmp::renderable>(ent);
+            world.emplace<main::board>(ent);
+            world.emplace<position>(ent, 0.f, 0.f);
+            world.emplace<renderable>(ent);
 
             return ent;
         }
