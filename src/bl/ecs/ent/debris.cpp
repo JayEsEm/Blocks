@@ -9,6 +9,10 @@ namespace bl::ecs::ent
     {
         auto ent = world.create();
 
+        world.emplace<cmp::main::board>(ent);
+        world.emplace<cmp::position>(ent, 0.f, 0.f);
+        world.emplace<cmp::renderable>(ent);
+
         return ent;
     }
 }

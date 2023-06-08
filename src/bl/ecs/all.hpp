@@ -6,6 +6,8 @@
 #include "bl/ecs/cmp/position.hpp"
 #include "bl/ecs/cmp/renderable.hpp"
 
+#include "bl/ecs/cmp/main/board.hpp"
+
 #include "bl/ecs/ent/block.hpp"
 #include "bl/ecs/ent/debris.hpp"
 

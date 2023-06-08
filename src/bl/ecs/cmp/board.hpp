@@ -3,6 +3,8 @@
 
 #include <array>
 
+#include "bl/types.hpp"
+
 namespace bl::ecs::cmp
 {
     template <unsigned rows, unsigned cols>
@@ -25,6 +27,7 @@ namespace bl::ecs::cmp
                     };
 
                 public:
+                    uint pixels = 20;
                     square::value value;
             };
 
