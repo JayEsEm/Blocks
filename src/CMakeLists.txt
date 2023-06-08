@@ -29,6 +29,7 @@ add_library(
     bl/time.cpp
     bl/ecs/system.cpp
     bl/ecs/ent/block.cpp
+    bl/ecs/ent/board.cpp
     bl/ecs/ent/debris.cpp
     bl/ecs/sys/renderer.cpp
     bl/scns/main.cpp
