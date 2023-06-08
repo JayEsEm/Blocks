@@ -4,9 +4,8 @@
 #include <memory>
 #include <vector>
 
-#include <entt.hpp>
-
 #include "bl/ecs/system.hpp"
+#include "bl/entt/entt.hpp"
 #include "bl/game.hpp"
 
 namespace bl

@@ -1,8 +1,7 @@
 #include "bl/ecs/ent/debris.hpp"
 
-#include <entt.hpp>
-
 #include "bl/ecs/all.hpp"
+#include "bl/entt/entt.hpp"
 
 namespace bl::ecs::ent
 {

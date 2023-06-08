@@ -1,8 +1,7 @@
 #ifndef A28D31EE_674E_4469_8C3F_2612530A8472
 #define A28D31EE_674E_4469_8C3F_2612530A8472
 
-#include <raylib.hpp>
-
+#include "bl/raylib.hpp"
 #include "bl/types.hpp"
 
 namespace bl

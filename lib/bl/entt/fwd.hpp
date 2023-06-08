@@ -1,0 +1,6 @@
+#ifndef C5885353_99B1_43C5_8BD5_8BEC3508BD59
+#define C5885353_99B1_43C5_8BD5_8BEC3508BD59
+
+#include <entt/fwd.hpp>
+
+#endif

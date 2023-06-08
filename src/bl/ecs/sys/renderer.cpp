@@ -1,9 +1,8 @@
 #include "bl/ecs/sys/renderer.hpp"
 
-#include <entt.hpp>
-
 #include "bl/canvas.hpp"
 #include "bl/ecs/all.hpp"
+#include "bl/entt/entt.hpp"
 #include "bl/macros.hpp"
 
 namespace bl::ecs::sys
