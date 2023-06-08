@@ -3,7 +3,7 @@
 
 #include <array>
 
-#include "bl/types.hpp"
+#include "bl/ecs/cmp/square.hpp"
 
 namespace bl::ecs::cmp
 {
@@ -11,27 +11,7 @@ namespace bl::ecs::cmp
     struct board
     {
         public:
-            struct square final
-            {
-                public:
-                    enum class value
-                    {
-                        n,
-                        i,
-                        j,
-                        l,
-                        o,
-                        s,
-                        t,
-                        z,
-                    };
-
-                public:
-                    uint pixels = 20;
-                    square::value value;
-            };
-
-            using table = std::array<std::array<board::square, cols>, rows>;
+            using table = std::array<std::array<square, cols>, rows>;
 
         public:
             board::table squares;

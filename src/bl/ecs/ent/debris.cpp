@@ -11,7 +11,7 @@ namespace bl::ecs::ent
 
         auto ent = world.create();
 
-        world.emplace<main::board>(ent);
+        world.emplace<gameboard>(ent);
 
         return ent;
     }

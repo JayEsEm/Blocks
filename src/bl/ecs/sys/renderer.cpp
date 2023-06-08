@@ -1,6 +1,7 @@
 #include "bl/ecs/sys/renderer.hpp"
 
 #include "bl/canvas.hpp"
+#include "bl/colors.hpp"
 #include "bl/ecs/all.hpp"
 #include "bl/entt/entt.hpp"
 
@@ -10,11 +11,57 @@ namespace bl::ecs::sys
     {
         using namespace bl::ecs::cmp;
 
-        auto view = world.view<main::board, position, renderer>();
+        auto color = [](square square) -> bl::color
+        {
+            using namespace bl::ecs::cmp;
+            using enum square::value;
+
+            switch (square.state)
+            {
+                case n:
+                {
+                    return bl::colors::n;
+                }
+                case i:
+                {
+                    return bl::colors::i;
+                }
+                case j:
+                {
+                    return bl::colors::j;
+                }
+                case l:
+                {
+                    return bl::colors::l;
+                }
+                case o:
+                {
+                    return bl::colors::o;
+                }
+                case s:
+                {
+                    return bl::colors::s;
+                }
+                case t:
+                {
+                    return bl::colors::t;
+                }
+                case z:
+                {
+                    return bl::colors::z;
+                }
+                default:
+                {
+                    return bl::colors::n;
+                }
+            }
+        };
+
+        auto view = world.view<gameboard, position, renderable>();
 
         for (auto ent : view)
         {
-            auto const& board = view.get<main::board>(ent);
+            auto const& board = view.get<gameboard>(ent);
             auto const& pos = view.get<position>(ent);
 
             for (size_t i = 0; i < board.squares.size(); i++)
@@ -25,6 +72,11 @@ namespace bl::ecs::sys
 
                     float x = pos.x + static_cast<float>(square.pixels * j);
                     float y = pos.y + static_cast<float>(square.pixels * i);
+                    float w = static_cast<float>(square.pixels);
+                    float h = static_cast<float>(square.pixels);
+
+                    canvas.set_draw_color(color(square));
+                    canvas.fill_rect(x + 1, y + 1, w - 1, h - 1);
                 }
             }
         }
