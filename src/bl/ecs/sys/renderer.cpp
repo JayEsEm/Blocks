@@ -57,12 +57,12 @@ namespace bl::ecs::sys
             }
         };
 
-        auto view = world.view<gameboard, position, renderable>();
+        auto targets = world.view<gameboard, position, renderable>();
 
-        for (auto ent : view)
+        for (auto target : targets)
         {
-            auto const& board = view.get<gameboard>(ent);
-            auto const& pos = view.get<position>(ent);
+            auto const& board = targets.get<gameboard>(target);
+            auto const& pos = targets.get<position>(target);
 
             for (size_t i = 0; i < board.squares.size(); i++)
             {
