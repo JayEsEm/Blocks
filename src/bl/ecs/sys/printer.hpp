@@ -12,6 +12,9 @@ namespace bl::ecs::sys
             void update(entt::registry& world, float dt) override;
 
         private:
+            void print_blocks(entt::registry& world);
+            void print_debris(entt::registry& world);
+
             void merge(cmp::gameboard const& source, cmp::gameboard& target);
     };
 }

@@ -10,6 +10,17 @@ namespace bl::ecs::sys
     {
         UNUSED_ARG(dt);
 
+        print_blocks(world);
+        print_debris(world);
+    }
+
+    void printer::print_blocks(entt::registry& world)
+    {
+        UNUSED_ARG(world);
+    }
+
+    void printer::print_debris(entt::registry& world)
+    {
         auto targets = world.view<cmp::gameboard, cmp::children>();
         auto sources = world.view<cmp::gameboard>();
 
