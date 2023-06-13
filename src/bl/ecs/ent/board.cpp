@@ -13,6 +13,7 @@ namespace bl::ecs::ent
 
             auto ent = world.create();
 
+            world.emplace<children>(ent);
             world.emplace<gameboard>(ent);
             world.emplace<position>(ent, 0.f, 0.f);
             world.emplace<renderable>(ent);

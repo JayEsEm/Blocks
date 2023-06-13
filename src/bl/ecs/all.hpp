@@ -3,6 +3,7 @@
 
 #include "bl/ecs/cmp/block.hpp"
 #include "bl/ecs/cmp/board.hpp"
+#include "bl/ecs/cmp/children.hpp"
 #include "bl/ecs/cmp/gameboard.hpp"
 #include "bl/ecs/cmp/position.hpp"
 #include "bl/ecs/cmp/renderable.hpp"
