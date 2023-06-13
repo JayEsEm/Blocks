@@ -11,6 +11,8 @@ namespace bl::ecs::ent
         {
             auto ent = world.create();
 
+            world.emplace<cmp::block>(ent);
+
             return ent;
         }
     }

@@ -16,7 +16,72 @@ namespace bl::ecs::sys
 
     void printer::print_blocks(entt::registry& world)
     {
-        UNUSED_ARG(world);
+        auto as_board = [&](cmp::block block) -> cmp::gameboard
+        {
+            auto result = cmp::gameboard();
+
+            switch (block.type)
+            {
+                case cmp::block::shape::i:
+                {
+                    break;
+                }
+                case cmp::block::shape::j:
+                {
+                    break;
+                }
+                case cmp::block::shape::l:
+                {
+                    result.squares[0][1].state = cmp::square::value::l;
+                    result.squares[1][1].state = cmp::square::value::l;
+                    result.squares[2][1].state = cmp::square::value::l;
+                    result.squares[3][1].state = cmp::square::value::l;
+
+                    break;
+                }
+                case cmp::block::shape::o:
+                {
+                    break;
+                }
+                case cmp::block::shape::s:
+                {
+                    break;
+                }
+                case cmp::block::shape::t:
+                {
+                    break;
+                }
+                case cmp::block::shape::z:
+                {
+                    break;
+                }
+            }
+
+            return result;
+        };
+
+        auto targets = world.view<cmp::gameboard, cmp::children>();
+        auto sources = world.view<cmp::block>();
+
+        for (auto target : targets)
+        {
+            auto candidates = targets.get<cmp::children>(target).entities;
+
+            for (auto candidate : candidates)
+            {
+                if (sources.contains(candidate) == false)
+                {
+                    continue;
+                }
+
+                auto source = candidate;
+
+                merge(
+                    as_board(sources.get<cmp::block>(source)),
+                    targets.get<cmp::gameboard>(target)
+                );
+            }
+        }
     }
 
     void printer::print_debris(entt::registry& world)
