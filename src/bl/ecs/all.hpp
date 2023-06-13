@@ -12,6 +12,7 @@
 #include "bl/ecs/ent/board.hpp"
 #include "bl/ecs/ent/debris.hpp"
 
+#include "bl/ecs/sys/printer.hpp"
 #include "bl/ecs/sys/renderer.hpp"
 
 #endif
