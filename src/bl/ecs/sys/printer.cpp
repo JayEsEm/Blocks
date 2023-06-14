@@ -16,9 +16,9 @@ namespace bl::ecs::sys
 
     void printer::print_blocks(entt::registry& world)
     {
-        auto as_board = [&](cmp::block block) -> cmp::gameboard
+        auto as_grid = [&](cmp::block block) -> cmp::board<4, 4>
         {
-            auto result = cmp::gameboard();
+            auto result = cmp::board<4, 4>();
 
             switch (block.type)
             {
@@ -32,10 +32,20 @@ namespace bl::ecs::sys
                 }
                 case cmp::block::shape::l:
                 {
-                    result.squares[0][1].state = cmp::square::value::l;
-                    result.squares[1][1].state = cmp::square::value::l;
-                    result.squares[2][1].state = cmp::square::value::l;
-                    result.squares[3][1].state = cmp::square::value::l;
+                    if (block.rotation % 2 == 0)
+                    {
+                        result.squares[0][1].state = cmp::square::value::l;
+                        result.squares[1][1].state = cmp::square::value::l;
+                        result.squares[2][1].state = cmp::square::value::l;
+                        result.squares[3][1].state = cmp::square::value::l;
+                    }
+                    else
+                    {
+                        result.squares[1][0].state = cmp::square::value::l;
+                        result.squares[1][1].state = cmp::square::value::l;
+                        result.squares[1][2].state = cmp::square::value::l;
+                        result.squares[1][3].state = cmp::square::value::l;
+                    }
 
                     break;
                 }
@@ -57,6 +67,30 @@ namespace bl::ecs::sys
                 }
             }
 
+            return result;
+        };
+
+        auto as_board = [&](cmp::block block) -> cmp::gameboard
+        {
+            auto result = cmp::gameboard();
+            {
+                auto source = as_grid(block);
+
+                for (size_t i = 0; i < source.squares.size(); i++)
+                {
+                    for (size_t j = 0; j < source.squares[i].size(); j++)
+                    {
+                        auto square = source.squares[i][j];
+
+                        if (square.state == cmp::square::value::n)
+                        {
+                            continue;
+                        }
+
+                        result.squares[i][j].state = square.state;
+                    }
+                }
+            }
             return result;
         };
 

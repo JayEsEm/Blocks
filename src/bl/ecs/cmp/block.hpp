@@ -20,6 +20,7 @@ namespace bl::ecs::cmp
             };
 
         public:
+            uint rotation;
             block::shape type;
     };
 }
